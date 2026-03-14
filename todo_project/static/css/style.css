@@ -1,0 +1,59 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-image: url("../images/bgimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    
+}
+
+h1 {
+    color: #333;
+    font-size: 40px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #6984A9;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6984A9;
+}
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+a {
+    margin-left: 10px;
+    color: red;
+    text-decoration: none;
+}

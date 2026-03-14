@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+</head>
+<body>
+
+<h1>My Todo List</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="task" placeholder="Enter task">
+    <button type="submit">Add Task</button>
+</form>
+
+<ul>
+{% for task in tasks %}
+    <li>
+        <form method="POST" action="/complete/{{ task.id }}/">
+            {% csrf_token %}
+            <input type="checkbox" onchange="this.form.submit()"
+            {% if task.completed %}checked{% endif %}>
+            
+            {% if task.completed %}
+                <s>{{ task.title }}</s>
+            {% else %}
+                {{ task.title }}
+            {% endif %}
+        
+
+        <a href="/delete/{{ task.id }}">🗑</a>
+        </form>
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
